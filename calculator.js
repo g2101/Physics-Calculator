@@ -20,15 +20,15 @@ function calculateATan() {
     final *= (180 / Math.PI)
     var outputFinal = final
 
-    if (xDisplacement < 0, yDisplacement > 0) {
+    if (xDisplacement < 0, yDisplacement > 0) { // upper left
         outputFinal += 180
         direction = "northwest"
     }
-        else if (xDisplacement < 0, yDisplacement < 0) {
+        else if (xDisplacement < 0, yDisplacement < 0) { // lower left
             outputFinal += 180
             direction = "southwest"
         }
-        else if (xDisplacement > 0, yDisplacement < 0) {
+        else if (xDisplacement > 0, yDisplacement < 0) { // lower right
             outputFinal += 360
             direction = "southeast"
         }
