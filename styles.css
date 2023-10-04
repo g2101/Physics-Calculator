@@ -36,8 +36,6 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 500px;
-    padding: 20px;
     border: none;
     text-align: center;
     align-items: flex-start;
@@ -97,9 +95,7 @@
     background-color: #0056b3;
   }
   
-  .output {
-    flex: 1;
-  }
+
   
   .output textarea {
     width: 100%;
@@ -110,7 +106,6 @@
     border-radius: 5px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
   }
   
   .button-container {
