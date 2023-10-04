@@ -21,7 +21,7 @@ function calculateATan() {
     var outputFinal = final
 
     if (-90<final<0) {
-        outputFinal += 360
+        outputFinal += 180
     }
     if (-90<final<-180) {
         outputFinal += 180
