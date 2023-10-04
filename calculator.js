@@ -30,3 +30,17 @@ function calculateATan() {
     const output = document.getElementById("tanOutput");
     output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees.`;
 }
+
+function pythagCalc() {
+    var a = document.getElementById("aValue").value;
+    var b = document.getElementById("bValue").value;
+
+    a **= 2
+    b **= 2
+
+    c = a + b
+    c **= .5
+
+    const output = document.getElementById("pythagOutput");
+    output.value = `C equals ${c.toFixed(2)}.`;
+}
