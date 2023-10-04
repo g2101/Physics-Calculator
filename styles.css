@@ -71,10 +71,8 @@
   }
   
   
-  .checkbox-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  .checkbox-list header-text {
+    font-size: 14px;
   }
   
   .action-button {
