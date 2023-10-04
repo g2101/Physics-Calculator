@@ -42,5 +42,5 @@ function pythagCalc() {
     c **= .5
 
     const output = document.getElementById("pythagOutput");
-    output.value = `C equals ${c.toFixed(2)}.`;
+    output.value = `C equals ${c.toFixed(2)}`;
 }
