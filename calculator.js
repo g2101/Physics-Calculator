@@ -52,5 +52,5 @@ function pythagCalc() {
     c **= .5
 
     const output = document.getElementById("pythagOutput");
-    output.value = `C = ${c.toFixed(2)}`;
+    output.value = `The hypotenouse is C = ${c.toFixed(2)}`;
 }
