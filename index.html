@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Physics Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+
+            <div class="checkbox-list">
+                <p>Enter the distance</p>
+                <input id="distanceInput" type="text" name="distance">
+                <br><br>
+                <p>Enter the direction</p>
+                <input id="directionInput" type="text" name="direction">
+            </div>
+            <div class="button-container">
+                <button id="calculate" onclick="calculate()" class="action-button">Calculate</button>
+            </div>
+            <div class="output">
+                <textarea id="output" name="output"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="form">
+            <div class="checkbox-list">
+                <p>Enter the X displacement</p>
+                <input id="xDisplacement" type="text" name="xDisplacement">
+                <br><br>
+                <p>Enter the Y displacement</p>
+                <input id="yDisplacement" type="text" name="yDisplacement">
+            </div>
+            <div class="button-container">
+                <button id="calculate" onclick="calculateATan()" class="action-button">Calculate aTan</button>
+            </div>
+            <div class="output">
+                <textarea id="tanOutput" name="tanOutput"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
