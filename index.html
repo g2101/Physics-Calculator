@@ -13,66 +13,65 @@
 
 <body>
     <div class="big-container">
-    <div class="container">
-        <div class="form">
-
-            <div class="checkbox-list">
-                <h1>Magnitude and Direction Calculator</h1>
-                <br>
-                <p>Enter the distance (hypotenuse)</p>
-                <input id="distanceInput" type="text" name="distance">
-                <br><br>
-                <p>Enter the direction in degrees</p>
-                <input id="directionInput" type="text" name="direction">
-            </div>
-            <div class="button-container">
-                <button id="calculate" onclick="calculate()" class="action-button">Calculate</button>
-            </div>
-            <div class="output">
-                <textarea id="output" name="output"></textarea>
-            </div>
-
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="form">
-            <div class="checkbox-list">
-                <h1>Reference Angle Calculator</h1>
-                <br>
-                <p>Enter the X displacement</p>
-                <input id="xDisplacement" type="text" name="xDisplacement">
-                <br><br>
-                <p>Enter the Y displacement</p>
-                <input id="yDisplacement" type="text" name="yDisplacement">
-            </div>
-            <div class="button-container">
-                <button id="calculate" onclick="calculateATan()" class="action-button">Calculate Theta</button>
-            </div>
-            <div class="output">
-                <textarea id="tanOutput" name="tanOutput"></textarea>
+        <div class="container">
+            <div class="form">
+                <div class="checkbox-list">
+                    <h1>Magnitude and Direction Calculator</h1>
+                    <br>
+                    <p>Enter the distance (hypotenuse)</p>
+                    <input id="distanceInput" type="text" name="distance">
+                    <br><br>
+                    <p>Enter the direction in degrees</p>
+                    <input id="directionInput" type="text" name="direction">
+                </div>
+                <div class="button-container">
+                    <button id="calculate" onclick="calculate()" class="action-button">Calculate</button>
+                </div>
+                <div class="output">
+                    <textarea id="output" name="output"></textarea>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="form">
-            <div class="checkbox-list">
-                <h1>Pythagorean Calculator</h1>
-                <br>
-                <p>Enter the A value</p>
-                <input id="aValue" type="text" name="aValue">
-                <br><br>
-                <p>Enter the B value</p>
-                <input id="bValue" type="text" name="bValue">
-            </div>
-            <div class="button-container">
-                <button id="pythagCalc" type="text" class="action-button" onclick="pythagCalc()">Calculate C</button>
-            </div>
-            <div class="output">
-                <textarea id="pythagOutput" name="pythagOutput"></textarea>
+        <br>
+        <div class="container">
+            <div class="form">
+                <div class="checkbox-list">
+                    <h1>Reference Angle Calculator</h1>
+                    <br>
+                    <p>Enter the X displacement</p>
+                    <input id="xDisplacement" type="text" name="xDisplacement">
+                    <br><br>
+                    <p>Enter the Y displacement</p>
+                    <input id="yDisplacement" type="text" name="yDisplacement">
+                </div>
+                <div class="button-container">
+                    <button id="calculate" onclick="calculateATan()" class="action-button">Calculate Theta</button>
+                </div>
+                <div class="output">
+                    <textarea id="tanOutput" name="tanOutput"></textarea>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="form">
+                <div class="checkbox-list">
+                    <h1>Pythagorean Calculator</h1>
+                    <br>
+                    <p>Enter the A value</p>
+                    <input id="aValue" type="text" name="aValue">
+                    <br><br>
+                    <p>Enter the B value</p>
+                    <input id="bValue" type="text" name="bValue">
+                </div>
+                <div class="button-container">
+                    <button id="pythagCalc" type="text" class="action-button" onclick="pythagCalc()">Calculate
+                        C</button>
+                </div>
+                <div class="output">
+                    <textarea id="pythagOutput" name="pythagOutput"></textarea>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="calculator.js"></script>
 </body>
