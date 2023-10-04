@@ -22,14 +22,19 @@ function calculateATan() {
 
     if (xDisplacement < 0, yDisplacement > 0) {
         outputFinal += 180
+        direction = "northwest"
     }
     if (xDisplacement < 0, yDisplacement < 0) {
         outputFinal += 360
+        direction = "southwest"
     }
-    if 
+    if (xDisplacement > 0, yDisplacement <0) {
+        outputFinal += 360
+        direction = "southeast"
+    }
     
     const output = document.getElementById("tanOutput");
-    output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees.`;
+    output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${final.toFixed(2)} degrees ${direction}.`;
 }
 
 function pythagCalc() {
