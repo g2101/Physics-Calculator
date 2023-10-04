@@ -24,14 +24,14 @@ function calculateATan() {
         outputFinal += 180
         direction = "northwest"
     }
-    if (xDisplacement < 0, yDisplacement < 0) {
-        outputFinal += 360
-        direction = "southwest"
-    }
-    if (xDisplacement > 0, yDisplacement <0) {
-        outputFinal += 360
-        direction = "southeast"
-    }
+        else if (xDisplacement < 0, yDisplacement < 0) {
+        
+            direction = "southwest"
+        }
+        else if (xDisplacement > 0, yDisplacement < 0) {
+            outputFinal += 360
+            direction = "southeast"
+        }
     
     const output = document.getElementById("tanOutput");
     output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${Math.abs(final.toFixed(2))} degrees ${direction}.`;
