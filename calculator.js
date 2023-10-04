@@ -9,7 +9,7 @@ xFinal = distance * Math.cos(direction)
 yFinal = distance * Math.sin(direction)
 
 const output = document.getElementById("output");
-output.value = `The X (cos) is ${xFinal.toFixed(3)} units. \nThe Y (sin) is ${yFinal.toFixed(3)} units.`
+output.value = `The X distance (cos) is ${xFinal.toFixed(3)} units. \nThe Y distance (sin) is ${yFinal.toFixed(3)} units.`
 }
 
 function calculateATan() {
