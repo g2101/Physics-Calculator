@@ -20,7 +20,7 @@ function calculateATan() {
     final *= (180 / Math.PI)
     var outputFinal = final
 
-    if (-90<=final<=0) {
+    if (xDisplacement < 0, yDisplacement > 0) {
         outputFinal += 180
     }
     if (-90<final<-180) {
