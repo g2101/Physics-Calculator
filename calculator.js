@@ -32,6 +32,9 @@ function calculateATan() {
             outputFinal += 360
             direction = "southeast"
         }
+        else {
+            direction = "northeast"
+        }
         
     
     const output = document.getElementById("tanOutput");
