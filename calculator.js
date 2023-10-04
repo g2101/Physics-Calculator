@@ -25,7 +25,7 @@ function calculateATan() {
         direction = "northwest"
     }
         else if (xDisplacement < 0, yDisplacement < 0) { // lower left
-            outputFinal += 180
+            outputFinal -= 180
             direction = "southwest"
         }
         else if (xDisplacement > 0, yDisplacement < 0) { // lower right
