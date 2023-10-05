@@ -41,7 +41,7 @@ function calculateATan() {
     output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${Math.abs(final.toFixed(2))} degrees ${direction}.`;
 }
 
-function pythagCalc() {
+function pythagoreanCalc() {
     var a = document.getElementById("aValue").value;
     var b = document.getElementById("bValue").value;
 
@@ -51,6 +51,6 @@ function pythagCalc() {
     c = a + b
     c **= .5
 
-    const output = document.getElementById("pythagOutput");
+    const output = document.getElementById("pythagoreanOutput");
     output.value = `The hypotenuse is C = ${c.toFixed(2)}`;
 }
