@@ -25,34 +25,61 @@ function calculateATan() {
     // upper left
     outputFinal += 180;
     direction = "northwest";
+    returnAngle(outputFinal, direction);
   } else if (xDisplacement < 0 && yDisplacement < 0) {
     // lower left
     outputFinal += 180;
     direction = "southwest";
+    returnAngle(outputFinal, direction);
   } else if (xDisplacement > 0 && yDisplacement < 0) {
     // lower right
     outputFinal += 360;
     direction = "southeast";
-  } else {
+    returnAngle(outputFinal, direction);
+  } else if (xDisplacement > 0 && yDisplacement > 0) {
     direction = "northeast";
+    returnAngle(outputFinal, direction);
   }
 
   if (xDisplacement == 0 && yDisplacement > 0) {
     direction = "north";
+    returnCardinal(outputFinal, direction);
   } else if (xDisplacement == 0 && yDisplacement < 0) {
     direction = "south";
+    returnCardinal(outputFinal, direction);
   } else if (xDisplacement > 0 && yDisplacement == 0) {
     direction = "east";
+    returnCardinal(outputFinal, direction);
   } else if (xDisplacement < 0 && yDisplacement == 0) {
+    outputFinal = 180;
     direction = "west";
+    returnCardinal(outputFinal, direction);
   }
 
+  if (xDisplacement == 0 && yDisplacement == 0) {
+    returnNone();
+  }
+}
+
+function returnAngle(outputFinal, direction) {
   const output = document.getElementById("tanOutput");
   output.value = `The angle of theta is ${outputFinal.toFixed(
     2
   )} degrees. You would need to go ${Math.abs(
-    final.toFixed(2)
+    outputFinal.toFixed(2)
   )} degrees ${direction}.`;
+}
+
+function returnCardinal(outputFinal, direction) {
+  const output = document.getElementById("tanOutput");
+  output.value = `The angle is directly ${direction}. It is ${Math.abs(
+    outputFinal.toFixed(2)
+  )} degrees.`;
+}
+
+function returnNone() {
+  const output = document.getElementById("tanOutput");
+  output.value = `There is no angle if no distance is traveled.`;
 }
 
 function pythagoreanCalc() {
