@@ -38,16 +38,13 @@ function calculateATan() {
   }
 
   if (xDisplacement == 0 && yDisplacement > 0) {
-    direction = "north"
-  } 
-  if (xDisplacement == 0 && yDisplacement < 0) {
-    direction = "south"
-  }
-  if (xDisplacement > 0 && yDisplacement == 0) { 
-    direction = "east"
-  }
-  if (xDisplacement < 0 && yDisplacement == 0) {
-    direction = "west"
+    direction = "north";
+  } else if (xDisplacement == 0 && yDisplacement < 0) {
+    direction = "south";
+  } else if (xDisplacement > 0 && yDisplacement == 0) {
+    direction = "east";
+  } else if (xDisplacement < 0 && yDisplacement == 0) {
+    direction = "west";
   }
 
   const output = document.getElementById("tanOutput");
