@@ -1,56 +1,73 @@
 function calculate() {
+  var direction = document.getElementById("directionInput").value;
+  var distance = document.getElementById("distanceInput").value;
 
-var direction = document.getElementById("directionInput").value;
-var distance = document.getElementById("distanceInput").value;
+  direction *= Math.PI / 180;
 
-direction *= (Math.PI / 180)
+  xFinal = distance * Math.cos(direction);
+  yFinal = distance * Math.sin(direction);
 
-xFinal = distance * Math.cos(direction)
-yFinal = distance * Math.sin(direction)
-
-const output = document.getElementById("output");
-output.value = `The X distance (cos) is ${xFinal.toFixed(3)} units. \nThe Y distance (sin) is ${yFinal.toFixed(3)} units.`
+  const output = document.getElementById("output");
+  output.value = `The X distance (cos) is ${xFinal.toFixed(
+    3
+  )} units. \nThe Y distance (sin) is ${yFinal.toFixed(3)} units.`;
 }
 
 function calculateATan() {
-    var xDisplacement = document.getElementById("xDisplacement").value;
-    var yDisplacement = document.getElementById("yDisplacement").value;
+  var xDisplacement = document.getElementById("xDisplacement").value;
+  var yDisplacement = document.getElementById("yDisplacement").value;
 
-    final = Math.atan(yDisplacement/xDisplacement);   
-    final *= (180 / Math.PI)
-    var outputFinal = final
+  final = Math.atan(yDisplacement / xDisplacement);
+  final *= 180 / Math.PI;
+  var outputFinal = final;
 
-    if (xDisplacement < 0 && yDisplacement > 0) { // upper left
-        outputFinal += 180
-        direction = "northwest"
-    }
-        else if (xDisplacement < 0 && yDisplacement < 0) { // lower left
-            outputFinal += 180
-            direction = "southwest"
-        }
-        else if (xDisplacement > 0 && yDisplacement < 0) { // lower right
-            outputFinal += 360
-            direction = "southeast"
-        }
-        else {
-            direction = "northeast"
-        }
-        
-    
-    const output = document.getElementById("tanOutput");
-    output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${Math.abs(final.toFixed(2))} degrees ${direction}.`;
+  if (xDisplacement < 0 && yDisplacement > 0) {
+    // upper left
+    outputFinal += 180;
+    direction = "northwest";
+  } else if (xDisplacement < 0 && yDisplacement < 0) {
+    // lower left
+    outputFinal += 180;
+    direction = "southwest";
+  } else if (xDisplacement > 0 && yDisplacement < 0) {
+    // lower right
+    outputFinal += 360;
+    direction = "southeast";
+  } else {
+    direction = "northeast";
+  }
+
+  if (outputFinal == 0) {
+    direction = "east"
+  } 
+  if (outputFinal == 90) {
+    direction = "north"
+  }
+  if (outputFinal ) {
+    direction = "west"
+  }
+  if (outputFinal == 270) {
+    direction = "south"
+  }
+
+  const output = document.getElementById("tanOutput");
+  output.value = `The angle of theta is ${outputFinal.toFixed(
+    2
+  )} degrees. You would need to go ${Math.abs(
+    final.toFixed(2)
+  )} degrees ${direction}.`;
 }
 
 function pythagoreanCalc() {
-    var a = document.getElementById("aValue").value;
-    var b = document.getElementById("bValue").value;
+  var a = document.getElementById("aValue").value;
+  var b = document.getElementById("bValue").value;
 
-    a **= 2
-    b **= 2
+  a **= 2;
+  b **= 2;
 
-    c = a + b
-    c **= .5
+  c = a + b;
+  c **= 0.5;
 
-    const output = document.getElementById("pythagoreanOutput");
-    output.value = `The hypotenuse is C = ${c.toFixed(2)}`;
+  const output = document.getElementById("pythagoreanOutput");
+  output.value = `The hypotenuse is C = ${c.toFixed(2)}`;
 }
