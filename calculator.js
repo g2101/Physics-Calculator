@@ -37,17 +37,17 @@ function calculateATan() {
     direction = "northeast";
   }
 
-  if (outputFinal == 0) {
-    direction = "east"
-  } 
-  if (outputFinal == 90) {
+  if (xDisplacement == 0 && yDisplacement > 0) {
     direction = "north"
-  }
-  if (outputFinal ) {
-    direction = "west"
-  }
-  if (outputFinal == 270) {
+  } 
+  if (xDisplacement == 0 && yDisplacement < 0) {
     direction = "south"
+  }
+  if (xDisplacement > 0 && yDisplacement == 0) { 
+    direction = "east"
+  }
+  if (xDisplacement < 0 && yDisplacement == 0) {
+    direction = "west"
   }
 
   const output = document.getElementById("tanOutput");
