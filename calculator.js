@@ -95,3 +95,30 @@ function pythagoreanCalc() {
   const output = document.getElementById("pythagoreanOutput");
   output.value = `The hypotenuse is C = ${c.toFixed(2)}`;
 }
+
+function calculateFriction1() {
+  var kilograms = document.getElementById("kilograms1").value;
+  var newtons = document.getElementById("newtons1").value;
+  var static = document.getElementById("static1").value;
+  var kinetic = document.getElementById("kinetic1").value;
+
+  var peakStatic = (kilograms * 10) * static;
+  var normalForce = kilograms * 10
+
+  var friction, acceleration, netForce;
+
+  if (newtons > peakStatic) {
+    isMoving = "is moving";
+    friction = (kinetic * normalForce)
+    netForce = (newtons - friction)
+    acceleration = netForce / kilograms
+  }
+  else {
+    isMoving = "is not moving";
+    friction = newtons;
+    netForce, acceleration = 0;
+  }
+
+  const output = document.getElementById("friction1Output");
+  output.value = `The peak static value is ${peakStatic.toFixed(2)} N.\nThe object ${isMoving}.\nThe friction is ${friction.toFixed(2)} N.\nThe net force is ${netForce.toFixed(2)} N.\nThe acceleration is ${acceleration.toFixed(2)} m/s/s.`;
+}

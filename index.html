@@ -72,6 +72,31 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="form">
+                <div class="checkbox-list">
+                    <h1>Friction Calculator</h1>
+                    <br>
+                    <p>Enter the weight in kilograms</p>
+                    <input id="kilograms1" type="text">
+                    <br><br>
+                    <p>Enter the force with which it is being pushed in Newtons</p>
+                    <input id="newtons1" type="text">
+                    <br><br>
+                    <p>Enter the coefficient of static force</p>
+                    <input id="static1" type="text">
+                    <br><br>
+                    <p>Enter the coefficient of kinetic force</p>
+                    <input id="kinetic1" type="text">
+                </div>
+                <div class="button-container">
+                    <button id="calculate" onclick="calculateFriction1()">Calculate</button>
+                </div>
+                <div class="output">
+                    <textarea id="friction1Output"></textarea>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="calculator.js"></script>
 </body>
