@@ -1,98 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Physics Calculator</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="physics.ico" />
 </head>
 
 <body>
     <div class="big-container">
+        <!-- Magnitude and Direction Calculator -->
         <div class="container">
             <div class="form">
                 <div class="checkbox-list">
                     <h1>Magnitude and Direction Calculator</h1>
                     <br>
-                    <p>Enter the distance (hypotenuse)</p>
+                    <label for="distanceInput">Enter the distance (hypotenuse)</label>
                     <input id="distanceInput" type="text">
                     <br><br>
-                    <p>Enter the direction in degrees</p>
+                    <label for="directionInput">Enter the direction in degrees</label>
                     <input id="directionInput" type="text">
                 </div>
                 <div class="button-container">
-                    <button id="calculate" onclick="calculate()">Calculate</button>
+                    <button id="calculateMagnitude" onclick="calculate()" aria-label="Calculate Magnitude">Calculate</button>
                 </div>
                 <div class="output">
+                    <label for="output">Output:</label>
                     <textarea id="output" name="output"></textarea>
                 </div>
             </div>
         </div>
-        <br>
+
+        <!-- Reference Angle Calculator -->
         <div class="container">
             <div class="form">
                 <div class="checkbox-list">
                     <h1>Reference Angle Calculator</h1>
                     <br>
-                    <p>Enter the X displacement</p>
+                    <label for="xDisplacement">Enter the X displacement</label>
                     <input id="xDisplacement" type="text">
                     <br><br>
-                    <p>Enter the Y displacement</p>
+                    <label for="yDisplacement">Enter the Y displacement</label>
                     <input id="yDisplacement" type="text">
                 </div>
                 <div class="button-container">
-                    <button id="calculate" onclick="calculateATan()">Calculate Theta</button>
+                    <button id="calculateATan" onclick="calculateATan()" aria-label="Calculate Theta">Calculate Theta</button>
                 </div>
                 <div class="output">
+                    <label for="tanOutput">Output:</label>
                     <textarea id="tanOutput"></textarea>
                 </div>
             </div>
         </div>
+
+        <!-- Pythagorean Calculator -->
         <div class="container">
             <div class="form">
                 <div class="checkbox-list">
                     <h1>Pythagorean Calculator</h1>
                     <br>
-                    <p>Enter the A value</p>
+                    <label for="aValue">Enter the A value</label>
                     <input id="aValue" type="text">
                     <br><br>
-                    <p>Enter the B value</p>
+                    <label for="bValue">Enter the B value</label>
                     <input id="bValue" type="text">
                 </div>
                 <div class="button-container">
-                    <button id="pythagCalc" type="text" onclick="pythagoreanCalc()">Calculate
-                        C</button>
+                    <button id="pythagCalc" type="button" onclick="pythagoreanCalc()" aria-label="Calculate C">Calculate C</button>
                 </div>
                 <div class="output">
+                    <label for="pythagoreanOutput">Output:</label>
                     <textarea id="pythagoreanOutput" name="pythagoreanOutput"></textarea>
                 </div>
             </div>
         </div>
+
+        <!-- Friction Calculator -->
         <div class="container">
             <div class="form">
                 <div class="checkbox-list">
                     <h1>Friction Calculator</h1>
                     <br>
-                    <p>Enter the weight in kilograms</p>
+                    <label for="kilograms1">Enter the weight in kilograms</label>
                     <input id="kilograms1" type="text">
                     <br><br>
-                    <p>Enter the force with which it is being pushed in Newtons</p>
+                    <label for="newtons1">Enter the force with which it is being pushed in Newtons</label>
                     <input id="newtons1" type="text">
                     <br><br>
-                    <p>Enter the coefficient of static force</p>
+                    <label for="static1">Enter the coefficient of static force</label>
                     <input id="static1" type="text">
                     <br><br>
-                    <p>Enter the coefficient of kinetic force</p>
+                    <label for="kinetic1">Enter the coefficient of kinetic force</label>
                     <input id="kinetic1" type="text">
                 </div>
                 <div class="button-container">
-                    <button id="calculate" onclick="calculateFriction1()">Calculate</button>
+                    <button id="calculateFriction" onclick="calculateFriction1()" aria-label="Calculate Friction">Calculate</button>
                 </div>
                 <div class="output">
+                    <label for="friction1Output">Output:</label>
                     <textarea id="friction1Output"></textarea>
                 </div>
             </div>

@@ -116,7 +116,8 @@ function calculateFriction1() {
   else {
     isMoving = "is not moving";
     friction = newtons;
-    netForce, acceleration = 0;
+    netForce = 0;
+    acceleration = 0;
   }
 
   const output = document.getElementById("friction1Output");
