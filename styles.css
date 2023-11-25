@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 5px;
   box-sizing: border-box;
 }
@@ -12,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0; /* Instead of * { margin: 0; } */
 }
 
 div {
@@ -42,7 +42,7 @@ div {
 }
 
 .header-text {
-  font-size: 4px;
+  font-size: 20px; /* Adjusted font size */
 }
 
 .content {
@@ -56,14 +56,7 @@ div {
   margin-right: 10px;
 }
 
-.link-input-container input {
-  padding: 10px;
-}
-
-h1 {
-  font-size: 28px;
-}
-
+/* Simplified button styling */
 button {
   background-color: #007bff;
   color: white;
@@ -75,7 +68,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.action-button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
@@ -105,6 +98,11 @@ button {
 .button-container button {
   display: block;
   margin: 10px auto;
+}
+
+/* Generalized input styling */
+input {
+  padding: 10px;
 }
 
 .external-link {

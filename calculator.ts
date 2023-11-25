@@ -1,4 +1,4 @@
-function calculate() {
+function calculateMagnitude() {
     var direction = parseFloat((<HTMLInputElement>document.getElementById("directionInput")).value);
     var distance = parseFloat((<HTMLInputElement>document.getElementById("distanceInput")).value);
   
@@ -9,16 +9,16 @@ function calculate() {
   
     const output = document.getElementById("output") as HTMLInputElement;
     output.value = `The X distance (cos) is ${xFinal.toFixed(3)} units. \nThe Y distance (sin) is ${yFinal.toFixed(3)} units.`;
-  }
-  
-  function calculateATan() {
+}
+
+function calculateATan() {
     var xDisplacement = parseFloat((<HTMLInputElement>document.getElementById("xDisplacement")).value);
     var yDisplacement = parseFloat((<HTMLInputElement>document.getElementById("yDisplacement")).value);
   
     var final = Math.atan(yDisplacement / xDisplacement);
     final *= 180 / Math.PI;
     var outputFinal = final;
-    var direction;
+    var direction = ""; // Initialize the direction variable
   
     if (xDisplacement < 0 && yDisplacement > 0) {
       // upper left
@@ -42,40 +42,45 @@ function calculate() {
   
     if (xDisplacement == 0 && yDisplacement > 0) {
       direction = "north";
-      returnCardinal(outputFinal, direction);
+      setOutputValue("tanOutput", `The angle is directly ${direction}. It is ${Math.abs(outputFinal)} degrees.`);
     } else if (xDisplacement == 0 && yDisplacement < 0) {
       direction = "south";
-      returnCardinal(outputFinal, direction);
+      setOutputValue("tanOutput", `The angle is directly ${direction}. It is ${Math.abs(outputFinal)} degrees.`);
     } else if (xDisplacement > 0 && yDisplacement == 0) {
       direction = "east";
-      returnCardinal(outputFinal, direction);
+      setOutputValue("tanOutput", `The angle is directly ${direction}. It is ${Math.abs(outputFinal)} degrees.`);
     } else if (xDisplacement < 0 && yDisplacement == 0) {
       outputFinal = 180;
       direction = "west";
-      returnCardinal(outputFinal, direction);
+      setOutputValue("tanOutput", `The angle is directly ${direction}. It is ${Math.abs(outputFinal)} degrees.`);
     }
   
     if (xDisplacement == 0 && yDisplacement == 0) {
-      returnNone();
+      setOutputValue("tanOutput", "There is no angle if no distance is traveled.");
     }
-  }
-  
-  function returnAngle(outputFinal: number, direction: string) {
+}
+
+function setOutputValue(outputId: string, value: string) {
+    const output = document.getElementById(outputId) as HTMLInputElement;
+    output.value = value;
+}
+
+function returnAngle(outputFinal: number, direction: string) {
     const output = document.getElementById("tanOutput") as HTMLInputElement;
-    output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${Math.abs(outputFinal)} degrees ${direction}.`;
-  }
-  
-  function returnCardinal(outputFinal: number, direction: string) {
+    output.value = `The angle of theta is ${outputFinal.toFixed(2)} degrees. You would need to go ${outputFinal.toFixed(2)} degrees ${direction}.`;
+}
+
+function returnCardinal(outputFinal: number, direction: string) {
     const output = document.getElementById("tanOutput") as HTMLInputElement;
     output.value = `The angle is directly ${direction}. It is ${Math.abs(outputFinal)} degrees.`;
-  }
-  
-  function returnNone() {
+}
+
+function returnNone() {
     const output = document.getElementById("tanOutput") as HTMLInputElement;
     output.value = `There is no angle if no distance is traveled.`;
-  }
-  
-  function pythagoreanCalc() {
+}
+
+function calculatePythagorean() {
     var a = parseFloat((<HTMLInputElement>document.getElementById("aValue")).value);
     var b = parseFloat((<HTMLInputElement>document.getElementById("bValue")).value);
   
@@ -87,9 +92,9 @@ function calculate() {
   
     const output = document.getElementById("pythagoreanOutput") as HTMLInputElement;
     output.value = `The hypotenuse is C = ${c.toFixed(2)}`;
-  }
-  
-  function calculateFriction1() {
+}
+
+function calculateFriction() {
     var kilograms = parseFloat((<HTMLInputElement>document.getElementById("kilograms1")).value);
     var newtons = parseFloat((<HTMLInputElement>document.getElementById("newtons1")).value);
     var staticFriction = parseFloat((<HTMLInputElement>document.getElementById("static1")).value);
@@ -115,5 +120,4 @@ function calculate() {
   
     const output = document.getElementById("friction1Output") as HTMLInputElement;
     output.value = `The peak static value is ${peakStatic.toFixed(2)} N.\nThe object ${isMoving}.\nThe friction is ${friction.toFixed(2)} N.\nThe net force is ${netForce.toFixed(2)} N.\nThe acceleration is ${acceleration.toFixed(2)} m/s/s.`;
-  }
-  
+}

@@ -1,4 +1,4 @@
-function calculate() {
+function calculateMagnitude() {
     var direction = parseFloat(document.getElementById("directionInput").value);
     var distance = parseFloat(document.getElementById("distanceInput").value);
     direction *= Math.PI / 180;
@@ -13,7 +13,7 @@ function calculateATan() {
     var final = Math.atan(yDisplacement / xDisplacement);
     final *= 180 / Math.PI;
     var outputFinal = final;
-    var direction;
+    var direction = ""; // Initialize the direction variable
     if (xDisplacement < 0 && yDisplacement > 0) {
         // upper left
         outputFinal += 180;
@@ -38,28 +38,32 @@ function calculateATan() {
     }
     if (xDisplacement == 0 && yDisplacement > 0) {
         direction = "north";
-        returnCardinal(outputFinal, direction);
+        setOutputValue("tanOutput", "The angle is directly ".concat(direction, ". It is ").concat(Math.abs(outputFinal), " degrees."));
     }
     else if (xDisplacement == 0 && yDisplacement < 0) {
         direction = "south";
-        returnCardinal(outputFinal, direction);
+        setOutputValue("tanOutput", "The angle is directly ".concat(direction, ". It is ").concat(Math.abs(outputFinal), " degrees."));
     }
     else if (xDisplacement > 0 && yDisplacement == 0) {
         direction = "east";
-        returnCardinal(outputFinal, direction);
+        setOutputValue("tanOutput", "The angle is directly ".concat(direction, ". It is ").concat(Math.abs(outputFinal), " degrees."));
     }
     else if (xDisplacement < 0 && yDisplacement == 0) {
         outputFinal = 180;
         direction = "west";
-        returnCardinal(outputFinal, direction);
+        setOutputValue("tanOutput", "The angle is directly ".concat(direction, ". It is ").concat(Math.abs(outputFinal), " degrees."));
     }
     if (xDisplacement == 0 && yDisplacement == 0) {
-        returnNone();
+        setOutputValue("tanOutput", "There is no angle if no distance is traveled.");
     }
+}
+function setOutputValue(outputId, value) {
+    var output = document.getElementById(outputId);
+    output.value = value;
 }
 function returnAngle(outputFinal, direction) {
     var output = document.getElementById("tanOutput");
-    output.value = "The angle of theta is ".concat(outputFinal.toFixed(2), " degrees. You would need to go ").concat(Math.abs(outputFinal), " degrees ").concat(direction, ".");
+    output.value = "The angle of theta is ".concat(outputFinal.toFixed(2), " degrees. You would need to go ").concat(outputFinal.toFixed(2), " degrees ").concat(direction, ".");
 }
 function returnCardinal(outputFinal, direction) {
     var output = document.getElementById("tanOutput");
@@ -69,7 +73,7 @@ function returnNone() {
     var output = document.getElementById("tanOutput");
     output.value = "There is no angle if no distance is traveled.";
 }
-function pythagoreanCalc() {
+function calculatePythagorean() {
     var a = parseFloat(document.getElementById("aValue").value);
     var b = parseFloat(document.getElementById("bValue").value);
     a = Math.pow(a, 2);
@@ -79,7 +83,7 @@ function pythagoreanCalc() {
     var output = document.getElementById("pythagoreanOutput");
     output.value = "The hypotenuse is C = ".concat(c.toFixed(2));
 }
-function calculateFriction1() {
+function calculateFriction() {
     var kilograms = parseFloat(document.getElementById("kilograms1").value);
     var newtons = parseFloat(document.getElementById("newtons1").value);
     var staticFriction = parseFloat(document.getElementById("static1").value);
